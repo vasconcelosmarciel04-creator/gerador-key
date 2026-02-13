@@ -1,0 +1,14 @@
+local keysValidas = {
+    ["A1B2C3D4E5F6G7H8"] = true,
+    ["X9Y8Z7W6V5U4T3S2"] = true,
+    ["P4K8L2M9Q1R7T6Y3"] = true
+}
+
+CheckButton.MouseButton1Click:Connect(function()
+    if keysValidas[KeyBox.Text] then
+        print("KEY CORRETA 🔥")
+    else
+        KeyBox.Text = ""
+        KeyBox.PlaceholderText = "KEY INCORRETA!"
+    end
+end)
